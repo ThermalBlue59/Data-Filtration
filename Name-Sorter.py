@@ -3,8 +3,10 @@ with open('Project 1\\Version 1\\WordList.txt','r') as f:
     rawData = f.readline()
     all_Data = rawData.split()
 #Words in the text file get digested into an array with the label "all_Data"
-key_words = ["dog","and","the"]
-#the variable "key_words" creates a catalog of words to search against
+with open('Project 1\\Version 1.1\\KeyWords.txt','r') as g:
+    coreKey = g.read()
+    key_words = coreKey.split()
+#Reads data from a filter file and creates an array with the labal "key_words"
 for words in key_words:
      filter = [Data for Data in all_Data if Data == words]
      if [Data for Data in all_Data if Data == words]:
